@@ -1,4 +1,4 @@
-package com.zyx.springboot;
+package com.zyx.springboot.other;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
