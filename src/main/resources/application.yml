@@ -4,4 +4,11 @@ spring:
     username: root
     url: jdbc:mysql://localhost:3306/springboot-data?useSSL=false
     password: 123456
-
+    #使用阿里的druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #配置监控拦截器filters,去掉后监控界面sql无法统计，'wall'用于防火墙
+    initialSize: 5
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMislls=500
