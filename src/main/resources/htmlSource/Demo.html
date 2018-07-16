@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="./my.css">
+    <script src="./jquery.min.js"></script>
+
+</head>
+<body>
+<!--手写区-->
+<div class="mSign_signMark_box">
+    <div class="mSign_signMark_write_box">
+        <div id="mSign_signMark_signature_pad" class="mSign_signMark_body_box">
+            <div class="mSign_signMark_body">
+                        <span  class="mSign_signMark_clear_out">
+                            <img src="">
+                        </span>
+                <p>手写区</p>
+                <canvas id="mSign_signMark_canvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!--手写区 end-->
+<!--底部按钮-->
+<div class="mSign_signMark_footer">
+    <span id="mSign_signMark_clear_out" class="mSign_signMark_footer_cancle">清除</span>
+    <span id="mSign_signMark_submit" class="mSign_signMark_footer_sure">确定</span>
+</div>
+<!--底部按钮 end-->
+
+
+</body>
+<script src="./mSign_signMark_app.js"></script>
+<script src="./mSign_signMark_signature_pad.js"></script>
+
+<script>
+    $(function() {
+        var ctouch=$('.mSign_signMark_body canvas');
+        ctouch.bind("touchstart",function(event){
+            $('.mSign_signMark_body p').hide();
+        });
+        ctouch.mouseover(function(event) {
+            $('.mSign_signMark_body p').hide();
+        });
+    });
+</script>
+</html>

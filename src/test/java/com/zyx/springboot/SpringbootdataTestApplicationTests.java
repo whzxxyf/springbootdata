@@ -8,6 +8,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.RecursiveTask;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -21,6 +25,8 @@ public class SpringbootdataTestApplicationTests {
 		System.out.println(dataSource.getClass());
 		Connection connection = dataSource.getConnection();
 		System.out.println(connection);
+		RecursiveTask
+
 	}
 
 }
