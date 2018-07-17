@@ -1,8 +1,5 @@
-package com.zyx.springboot.other;
+package com.zyx.springboot.utils;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 

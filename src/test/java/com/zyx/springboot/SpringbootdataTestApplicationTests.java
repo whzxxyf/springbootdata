@@ -8,10 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.RecursiveTask;
+import com.zyx.springboot.utils.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -25,6 +22,13 @@ public class SpringbootdataTestApplicationTests {
 		System.out.println(dataSource.getClass());
 		Connection connection = dataSource.getConnection();
 		System.out.println(connection);
+	}
+
+	@Test
+	public void genStr(){
+		//String str = GenRandomAndChar.creatStr(10);
+		String str = GenRandomAndChar.getRandomPassword(4);
+		System.out.println(str);
 	}
 
 }
