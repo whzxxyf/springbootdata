@@ -5,7 +5,7 @@ import java.util.Random;
 public class GenRandomAndChar {
 
 
-    //33-47是符号
+    //ASSI码中 33-47是符号
     private static final int INT_33 = 33;
     private static final int INT_14 = 14;
     private static final int INT_65 = 65;

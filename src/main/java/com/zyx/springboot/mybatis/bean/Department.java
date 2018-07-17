@@ -1,9 +1,9 @@
 package com.zyx.springboot.mybatis.bean;
 
-public class department {
+public class Department {
 
     private Integer id;
-    private String departName;
+    private String departmentName;
 
     public Integer getId() {
         return id;
@@ -14,10 +14,10 @@ public class department {
     }
 
     public String getDepartName() {
-        return departName;
+        return departmentName;
     }
 
-    public void setDepartName(String departName) {
-        this.departName = departName;
+    public void setDepartName(String departmentName) {
+        this.departmentName = departmentName;
     }
 }
