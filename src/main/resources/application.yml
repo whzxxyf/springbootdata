@@ -12,10 +12,12 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMislls=500
-    #每次启动会自动创建表
-        #schema:
-          #- classpath:sql/dept.sql
-          #- classpath:sql/emp.sql
+  jpa:
+    hibernate:
+    #每次更新或者创建有@Entity注解的数据表结构
+      ddl-auto: update
+    show-sql: true
+
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
@@ -23,4 +25,7 @@ mybatis:
   #或者是写*.xml
 
 
-
+#每次启动会自动创建表
+        #schema:
+          #- classpath:sql/dept.sql
+          #- classpath:sql/emp.sql
